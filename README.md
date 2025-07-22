@@ -1,19 +1,14 @@
-hw2
-Cifar-10資料集，以CNN卷積式神經網路進行訓練
+HW2
+# Cifar-10資料集，以CNN卷積式神經網路進行訓練
 
-文件結構(recommended by DeepSeek):
+文件結構:
 ```
 cifar10_cnn/
 ├── data/                # 存放數據集
-├── models/              # 保存訓練好的模型
-├── utils/               # 工具函數
-│   └── preprocess.py    # 數據預處理函數
-├── experiments/         # 不同實驗
+├── experiments/         # 不同測試
 │   ├── test2_normalization.py
 │   ├── test3_shuffle.py
 │   └── ...
-├── config.py            # 共用配置
-└── main.py              # 主入口文件
 ```
 
 ## 測試一：固定模型架構及參數下，資料是否正規化之比較。
@@ -315,7 +310,7 @@ cifar10_cnn/
 
 ## 結論
 
-#### **1. 資料預處理至關重要**
+#### **1. 資料預處理**
 - **正規化（Normalization）** 使驗證準確率提升 **9.7%**，損失降低 **24%**，並加速收斂（快 2 倍）。  
 - **資料 Shuffle** 提高準確率 **6%**，減少訓練波動，避免模型陷入局部最佳解。
 
