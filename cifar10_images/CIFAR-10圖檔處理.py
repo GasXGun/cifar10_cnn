@@ -36,5 +36,3 @@ for idx in range(len(x_all)):
     # 進度顯示
     if idx % 1000 == 0:
         print(f"已處理 {idx+1}/60000 張圖檔")
-
-print("所有圖檔保存完成！")
