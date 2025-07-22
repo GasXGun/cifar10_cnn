@@ -32,8 +32,11 @@ cifar10_cnn/
 使用相同的優化器(Adam)、學習率、批次大小(batch_size=64)、正規化(像素值縮放到 0-1)
 操縱變因：
 2層 CNN：Conv2D → MaxPooling → Conv2D → MaxPooling → Flatten → Dense
+
 3層 CNN：額外增加一組 Conv2D → MaxPooling
+
 4層 CNN：再增加一組 Conv2D → MaxPooling
+
 ![alt text](experiments/cnn_layers_comparison.png)
 | 模型架構   | 最終驗證準確率 | 最終驗證損失 | 訓練準確率 | 關鍵觀察                     |
 |------------|----------------|--------------|------------|------------------------------|
@@ -46,3 +49,6 @@ cifar10_cnn/
 
 - **過擬合跡象**  
   - 2層/4層模型的訓練準確率比驗證準確率高出 **10%以上**，3層差距最小（13.9%）。
+
+  測試四：固定層數、其他參數下，調整filters大小之比較。至少三種數值，例如：16、32、64。
+  
